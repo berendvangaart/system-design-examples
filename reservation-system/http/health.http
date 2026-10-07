@@ -1,0 +1,3 @@
+### Health check: Postgres + Redis
+GET http://localhost:{{port}}/health
+Accept: application/json

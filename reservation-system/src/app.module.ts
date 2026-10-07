@@ -5,6 +5,7 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { databaseConfig } from './config/database.config.js';
 import { redisConfig } from './config/redis.config.js';
+import { HealthModule } from './health/health.module.js';
 import { RedisModule } from './redis/redis.module.js';
 
 @Module({
@@ -22,6 +23,7 @@ import { RedisModule } from './redis/redis.module.js';
       }),
     }),
     RedisModule,
+    HealthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
