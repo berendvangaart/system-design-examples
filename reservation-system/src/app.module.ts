@@ -19,6 +19,7 @@ import { RedisModule } from './common/redis/redis.module.js';
       useFactory: (config: ConfigType<typeof databaseConfig>) => ({
         type: 'postgres',
         ...config,
+        uuidExtension: 'pgcrypto',
         autoLoadEntities: true,
       }),
     }),
